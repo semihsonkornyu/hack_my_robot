@@ -179,6 +179,6 @@ This criterion aims to evaluate the team’s ability to think “out of the box�
 2. The teams will have physical access to the robots; however, if they achieve the goals by utilizing physical attacks, they will receive half of the standard points.
 3. Each team will need to present a poster at the end of the final round. The template for the poster can be found [here](https://docs.google.com/presentation/d/1x-OmkGRheAjjI__kbQStaainIRyfAbNc/edit?usp=share_link&ouid=110937514079708301128&rtpof=true&sd=true). Each team will have 10 minutes to present/summarize what they did during the challenge (see the timeline in the item below). The poster presentation will be considered by the judges, too (e.g., in the Creativity / Bonus sections). The poster size is A0 (841 x 1189 mm). It can be printed at NYUAD if needed.
 4. The final round will take place from 1 pm to 5 pm on November 11. The breakdown of this period is as follows:
-    1. 1:00 - 1:30 pm (30 mins) - Preparation / set up
-    2. 1:30 - 4:00 pm (2.5 hours) - Competition and judging
-    3. 4:00 - 5:00 pm (1 hour) - Poster presentations (10 mins per team) / judges' deliberations
+    1. 2:00 - 2:30 pm (30 mins) - Preparation / set up
+    2. 2:30 - 5:00 pm (2.5 hours) - Competition and judging
+    3. 5:00 - 6:00 pm (1 hour) - Poster presentations (10 mins per team) / judges' deliberations

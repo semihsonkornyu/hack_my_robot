@@ -24,6 +24,10 @@
         sudo nano 50-cloud-init.yaml
         ```
         ![](doc/images/2022-10-17-10-35-43.png)
+   * Plug the microSD card back into the turtlebot and boot it up. If all the steps were done correctly, the turtlebot should now be connected to your WiFi network and you can connect through ssh (username:ubuntu / password:turtlebot).
+        ```
+        ssh ubuntu@IP_ADDRESS_OF_TURTLEBOT3
+        ``` 
 4. ROS Network configuration.
    * Adjust the parameters according to the IP addresses of your devices.
    * Remote PC.
@@ -38,7 +42,7 @@
   
 5. Test your configuration.
    * Bringup your robot by following the [Robotis eManual](https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup).
-   * Test the [keyboard teleoperation](https://emanual.robotis.com/docs/en/platform/turtlebot3/basic_operation/) from your Remote PC to check if all the network configuration parameters have been properly set. If the robot is not moving, you probably need to recheck all the network parameters.  
+   * Test the [keyboard teleoperation](https://emanual.robotis.com/docs/en/platform/turtlebot3/basic_operation/) from your Remote PC to check if all the network configuration parameters have been properly set. If the robot is not moving, you probably need to recheck all the network parameters, double check that the /etc/hosts file in the TurtleBot3 contains a reference to your Remote PC.  
 
 ### Mapping the scenario
 For further detailed information please refer to the [Robotis eManual](https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/#run-slam-node).
@@ -48,23 +52,19 @@ For further detailed information please refer to the [Robotis eManual](https://e
 ```
 roslaunch turtlebot3_bringup turtlebot3_robot.launch
 ```
-3. Bringup of the RPi camera node. 
-```
-roslaunch turtlebot3_bringup turtlebot3_rpicamera.launch
-```
-4. Use the SLAM algorithm to map the scenario. It doesn't need to be too big, just focus on the area you are going to work with, around 1.5mx1.5m. 
+3. Use the SLAM algorithm to map the scenario. It doesn't need to be too big, just focus on the area you are going to work with, around 1.5mx1.5m. 
 ```
 roslaunch turtlebot3_slam turtlebot3_slam.launch
 ```
-5. Use the keyboard teleoperation to drive your robot around, until you are satisfied with the mapped environment.
+4. Use the keyboard teleoperation to drive your robot around, until you are satisfied with the mapped environment.
 ```
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 ```
-6. Save your map. You can use the *-f* option in order to specify a folder location and a file name. 
+5. Save your map. You can use the *-f* option in order to specify a folder location and a file name. 
 ```
 rosrun map_server map_saver -f ~/map
 ```
-7. Kill the SLAM node.
+6. Kill the SLAM node with Ctrl+C
 
 ### Launch the Hack My Robot routine
 
@@ -90,8 +90,8 @@ roslaunch hack_my_robot hack_my_robot_complete.launch
 ```
 rostopic pub -1 /path_ready std_msgs/Empty
 ```
-8. Wait until it finishes the routine. If all went well, the robot should have taken 3 pictures in the 3 locations you previously set. 
-9.  If you are happy with the routine, publish an empty message to the start_journey topic to start a loop. The routine will stop as soon as you stop publishing the message to the topic. 
+8. Wait until it finishes the routine. If all went well, the robot should have "EXCAVATED" in the 3 locations you previously set. 
+9. If you are happy with the routine, publish an empty message to the start_journey topic to start a loop. The routine will stop as soon as you stop publishing the message to the topic. 
 ```
 rostopic pub /start_journey std_msgs/Empty
 ```

@@ -2,15 +2,8 @@
 
   <!-- Navigation node -->
   <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
-    <arg name="map_file" value="/home/sxp8070/map_lab.yaml" />
+    <arg name="map_file" value="path_to_your_map" />
   </include>
-
-  <!-- Node to save images -->
-  <node pkg="image_view" type="image_saver" name="image_saver" output="log">
-    <remap from="image" to="/camera/image"/>
-    <param name="save_all_image" value="false"/>
-    <param name="filename_format" value="$(find hack_my_robot)/images/image_%04d.png"/>
-  </node>
 
   <!-- Hack my robot main routine -->
   <node pkg="hack_my_robot" type="hack_my_robot_node" name="hack_my_robot" output="screen" clear_params="true">

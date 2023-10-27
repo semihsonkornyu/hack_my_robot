@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import threading
 import rospy
@@ -38,14 +38,14 @@ def start_scan_response():
             take_pic_srv = rospy.ServiceProxy('/image_saver/save', Emptysrv) # TAKE PICTURE SERVICE
             resp1 = take_pic_srv() # TAKE PICTURE SERVICE
         else:
-            rospy.loginfo("EXCAVATING!")
-            rospy.sleep(15)
+            rospy.loginfo("EXCAVATING! Duration: 4s")
+            rospy.sleep(4) # TODO
 
         rospy.loginfo("Service finished.")
         rospy.loginfo("Counter = %s" % counter)
-        rospy.loginfo("Number of scans = %s" % number_of_scans)
+        rospy.loginfo("Number of waypoints = %s" % number_of_scans)
         if (counter % number_of_scans) == 0:
-            rospy.loginfo("Round finished. Storing the temporal data inside the vault")
+            rospy.loginfo("Round finished")
           
         counter += 1
 
@@ -175,7 +175,7 @@ class GetPath(State):
         # Wait for published waypoints or saved path loaded
         while (not self.path_ready and not self.start_journey_bool):
             try:
-                pose = rospy.wait_for_message(topic, PoseWithCovarianceStamped, timeout=1)
+                pose = rospy.wait_for_message(topic, PoseWithCovarianceStamped, timeout=600)
             except rospy.ROSException as e:
                 if 'timeout exceeded' in e.message:
                     continue  # no new waypoint within timeout, looping...
@@ -230,9 +230,7 @@ class FollowPath(State):
             if not self.distance_tolerance > 0.0:
                 self.client.wait_for_result()
             
-                #rospy.loginfo("Scan starting!")
                 start_scan_response()
-                #rospy.loginfo("Sucessfully scanned, moving to the next position.")          
 
                 rospy.loginfo("Waiting for %f sec..." % self.duration)
                 time.sleep(self.duration)

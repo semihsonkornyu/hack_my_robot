@@ -167,8 +167,12 @@ This criterion aims to evaluate the team’s ability to think “out of the box�
   5.	During the competition, the teams should inform the judges or organizers to show their successful attacks immediately and demonstrate what they did (if requested) to collect points for different criteria. 
   6.	Each team will need to present a poster at the end of the final round. The template for the poster can be found [here](https://docs.google.com/presentation/d/1x-OmkGRheAjjI__kbQStaainIRyfAbNc/edit?usp=share_link&ouid=110937514079708301128&rtpof=true&sd=true). The teams need to send their posters to the organizers by the end of November 7. Each team will have 10 minutes to present/summarize what they did during the challenge (see the timeline in the item below). The poster presentation will be considered by the judges, too (e.g., in the Creativity / Bonus sections). The poster size is A0 (841 x 1189 mm). It can be printed by the organizers at NYUAD if needed. 
   7.	The final round will take place from 2 p.m. to 6 p.m. on November 10. The breakdown of this period is as follows:
+
     •	2:00 - 2:30 p.m. (30 mins) - Preparation / set up
+
     •	2:30 - 5:00 p.m. (2.5 hours) - Competition and judging
+    
     •	5:00 - 6:00 p.m. (1 hour) - Poster presentations (10 mins per team) / judges' deliberations
+    
 
 

@@ -2,7 +2,7 @@
 
   <!-- Navigation node -->
   <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
-    <arg name="map_file" value="path_to_your_map" />
+    <arg name="map_file" value="/home/sxp8070/map.yaml" />
   </include>
 
   <!-- Hack my robot main routine -->

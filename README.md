@@ -7,9 +7,9 @@
    * [Youtube tutorial](https://www.youtube.com/watch?v=5D9S_tcenL4) 
 2. Setup your PC.
    * [Robotis eManual](https://emanual.robotis.com/docs/en/platform/turtlebot3/sbc_setup/#sbc-setup)
-   * Download and install Ubuntu on your PC (Remote PC). The recommended distribution is Noetic. You're free to install everything on a virtual machine, but performance wise it's going to be better if you partition your disk. 
+   * Download and install Ubuntu on your PC (Remote PC). The recommended setup is Ubuntu 20.04 and ROS Noetic. You're free to install everything on a virtual machine, but performance wise it's going to be better if you partition your disk. 
    * Install dependent ROS packages and TurtleBot3 packages.
-   * Clone this repository on your ```catkin_ws``` workspace and build it. (You can also clone and run this node on the TurtleBot3, but performance wise we recommend you run it on your Remote PC)
+   * Clone this repository on your ```catkin_ws/src``` directory and build it. (You can also clone and run this node on the TurtleBot3, but performance wise we recommend you run it on your Remote PC)
    ```
    cd catkin_ws
    catkin_make
@@ -31,13 +31,15 @@
 4. ROS Network configuration.
    * Adjust the parameters according to the IP addresses of your devices.
    * Remote PC.
-      - ROS_MASTER_URI=http://localhost:11311
-      - ROS_IP={IP_ADDRESS_OF_REMOTE_PC}
+      - Add the following two lines to your ~/.bashrc file
+         - ROS_MASTER_URI=http://localhost:11311
+         - ROS_IP={IP_ADDRESS_OF_REMOTE_PC}
       - Include the IP address and hostname of the TurtleBot3 in your ```/etc/hosts``` file (if you don't do this, you might have issues communicating with the TurtleBot3 later on).
   
    * TurtleBot3 SBC. 
-      - ROS_MASTER_URI=http://{IP_ADDRESS_OF_REMOTE_PC}:11311
-      - ROS_IP={IP_ADDRESS_OF_TURTLEBOT3}
+      - Add the following two lines to your ~/.bashrc file
+         - ROS_MASTER_URI=http://{IP_ADDRESS_OF_REMOTE_PC}:11311
+         - ROS_IP={IP_ADDRESS_OF_TURTLEBOT3}
       - Include the IP address and hostname of your Remote PC in the TurtleBot3 ```/etc/hosts``` file (if you don't do this, you might have issues communicating with the TurtleBot3 later on).
   
 5. Test your configuration.

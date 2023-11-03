@@ -162,7 +162,7 @@ This criterion aims to evaluate the team’s ability to think “out of the box�
 
 #### Final Round Rules and Timeline
 
-  1.	All teams should bring their laptops to the final round to perform their attacks.
+  1.	All teams should bring their laptops and any additional equipment required to the final round to perform their attacks.
   2.	The teams can get support from ChatGPT during the final round; however, they need to acknowledge their use. Therefore, the teams that use ChatGPT need to submit the full prompts and answers history from ChatGPT to the judges at the end of the competition. 
   3.	The teams will have physical access to the robots if they request it; however, if they achieve the goals by utilizing physical attacks, they will receive half of the standard points for all the achieved goals that directly or indirectly depend on the physical access.
   4.	The teams will collect points only if they achieve the criteria intentionally. For example, if the robot gets disconnected from the network due to a technical problem, not because of an attack, the team will not receive any points for Criterion 5. If the robot hits one of the objects on the arena due to a technical issue, not because of the team’s modifications, the team will not receive any points for Criterion 3. 
